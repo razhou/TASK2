@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.ghost.kalkulator2.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="#6fd042">
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="73dp" >
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center">
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layIn"
+        android:gravity="center"
+
+
+        android:layout_alignTop="@+id/scrollView"
+        android:layout_centerHorizontal="true"
+        android:background="#ffffff">
+        <EditText
+            android:layout_width="184dp"
+            android:layout_height="60dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="INCOME"
+            android:id="@+id/txtIn"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/txtOut"
+            android:layout_alignStart="@+id/txtOut"
+            android:editable="false"
+            android:enabled="true"
+            android:clickable="true" />
+
+        <EditText
+            android:layout_width="184dp"
+            android:layout_height="47dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="OUTCOME"
+            android:id="@+id/txtOut"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:editable="true"
+            android:focusable="true" />
+
+        <EditText
+            android:layout_width="184dp"
+            android:layout_height="57dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="BALANCE : VAL"
+            android:id="@+id/txtVal"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_alignBaseline="@+id/btnHitung"
+            android:layout_alignBottom="@+id/btnHitung"
+            android:layout_toRightOf="@+id/btnHitung"
+            android:layout_toEndOf="@+id/btnHitung"
+            android:enabled="false"
+            android:editable="true" />
+
+
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="65px"
+        android:paddingLeft="55px"
+        android:paddingRight="55px"
+        android:paddingBottom="80px"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        android:layout_below="@+id/layIn">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:id="@+id/btn1"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:id="@+id/btn2" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:id="@+id/btn3" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:id="@+id/btn4" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:id="@+id/btn5" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:id="@+id/btn6" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7"
+                android:id="@+id/btn7" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8"
+                android:id="@+id/btn8" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9"
+                android:id="@+id/btn9" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Del"
+                android:id="@+id/btnDel"
+                android:layout_column="0" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/btn0"
+                android:layout_column="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear"
+                android:id="@+id/btnClr"
+                android:layout_column="2" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>
